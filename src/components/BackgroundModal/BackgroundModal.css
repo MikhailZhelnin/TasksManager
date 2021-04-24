@@ -1,0 +1,51 @@
+.backgroundModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.backgroundModal__wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.5);
+}
+
+.backgroundModal__item {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgb(129, 129, 129);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.backgroundModal__item:hover > img {
+  transform: scale(1.1);
+}
+
+.backgroundModal__item > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.2s linear;
+}
+
+.backgroundModal__btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+}

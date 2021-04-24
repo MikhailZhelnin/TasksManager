@@ -1,7 +1,7 @@
 .header {
   margin-bottom: 30px;
   padding: 10px 0;
-  border-bottom: 1px solid #111;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .header-dark {
@@ -15,4 +15,5 @@
 }
 
 .header__title {
+  color: #fff;
 }
