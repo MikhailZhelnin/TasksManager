@@ -1,0 +1,21 @@
+.tasksList {
+}
+
+.tasksList__item {
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.tasksList__item:last-child {
+  margin-bottom: 0;
+}
+
+.tasksList__item-name {
+  flex-grow: 1;
+}
+
+.tasksList__item-check__btn {
+}
+
+.tasksList__item-check__delete {
+}

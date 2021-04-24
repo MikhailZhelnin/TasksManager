@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import { useSelector } from 'react-redux';
+
+import Header from './components/Header/Header';
+import GroupList from './components/GroupList/GroupList';
+import GroupModal from './components/GroupModal/GroupModal';
+
 import './App.css';
 
 function App() {
+  const modal = useSelector((state) => state.groups.groupsModalOpen);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <GroupList />
+      {modal ? <GroupModal /> : null}
     </div>
   );
 }

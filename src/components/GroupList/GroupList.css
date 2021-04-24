@@ -1,0 +1,21 @@
+.groupList {
+}
+
+.groupList__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.groupList__btn {
+  margin-bottom: 30px;
+}
+
+.groupList__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100px;
+}

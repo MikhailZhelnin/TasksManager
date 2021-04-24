@@ -1,0 +1,18 @@
+.header {
+  margin-bottom: 30px;
+  padding: 10px 0;
+  border-bottom: 1px solid #111;
+}
+
+.header-dark {
+  background-color: rgb(66, 66, 66);
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+}
