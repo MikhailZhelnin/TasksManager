@@ -13,16 +13,17 @@ import './BackgroundModal.css';
 const BackgroundModal = () => {
   const dispatch = useDispatch();
 
+  const selectImageHandler = (img) => {
+    dispatch(selectBackground(img));
+    dispatch(closeBackModal());
+  };
+
   return (
     <div className="backgroundModal">
       <div className="backgroundModal__wrapper">
         {dataImages.map((item) => (
           <div key={item.id} className="backgroundModal__item">
-            <img
-              src={item.img}
-              alt="background"
-              onClick={() => dispatch(selectBackground(item.img))}
-            />
+            <img src={item.img} alt="background" onClick={() => selectImageHandler(item.img)} />
           </div>
         ))}
         <button className="backgroundModal__btn-close" onClick={() => dispatch(closeBackModal())}>
