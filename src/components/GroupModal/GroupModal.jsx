@@ -16,6 +16,7 @@ const GroupModal = () => {
     const newGroup = {
       id: new Date().getTime().toString(),
       name: groupName,
+      timeOfCreating: Date.now(),
       tasks: [],
     };
     dispatch(addGroupAction(newGroup));

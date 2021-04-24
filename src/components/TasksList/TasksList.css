@@ -1,9 +1,13 @@
 .tasksList {
+  margin-bottom: 10px;
 }
 
 .tasksList__item {
   margin-bottom: 5px;
+  padding: 10px;
   display: flex;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 .tasksList__item:last-child {
