@@ -16,20 +16,27 @@ const TasksList = (props) => {
       {tasks.map((item) =>
         item.groupId === props.id ? (
           <div key={item.id} className="tasksList__item">
-            <span
-              className={
-                item.isCompleted
-                  ? 'tasksList__item-name tasksList__item-name__completed'
-                  : 'tasksList__item-name '
-              }>
-              {item.name}
-            </span>
-            <MdCheck className="tasksList__item-btn" onClick={() => dispatch(checkTask(item.id))} />
+            <div className="tasksList__item-content">
+              <span
+                className={
+                  item.isCompleted
+                    ? 'tasksList__item-name tasksList__item-name__completed'
+                    : 'tasksList__item-name '
+                }>
+                {item.name}
+              </span>
+            </div>
+            <div className="tasksList__item-actions">
+              <MdCheck
+                className="tasksList__item-btn"
+                onClick={() => dispatch(checkTask(item.id))}
+              />
 
-            <MdClose
-              className="tasksList__item-btn"
-              onClick={() => dispatch(deleteTask(item.id))}
-            />
+              <MdClose
+                className="tasksList__item-btn"
+                onClick={() => dispatch(deleteTask(item.id))}
+              />
+            </div>
           </div>
         ) : (
           ''

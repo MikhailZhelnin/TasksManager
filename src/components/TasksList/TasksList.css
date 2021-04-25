@@ -5,10 +5,16 @@
 .tasksList__item {
   margin-bottom: 5px;
   padding: 10px;
+  width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: #fff;
   border-radius: 5px;
+}
+
+.tasksList__item-content {
+  padding-right: 5px;
+  flex-grow: 1;
 }
 
 .tasksList__item:last-child {
@@ -16,12 +22,16 @@
 }
 
 .tasksList__item-name {
-  flex-grow: 1;
 }
 
 .tasksList__item-name__completed {
   color: rgb(153, 153, 153);
   text-decoration: line-through;
+}
+
+.tasksList__item-actions {
+  display: flex;
+  justify-content: center;
 }
 
 .tasksList__item-btn {
