@@ -13,13 +13,11 @@ const GroupModal = () => {
     if (groupName === '') {
       return false;
     }
-    const newGroup = {
-      id: new Date().getTime().toString(),
-      name: groupName,
-      timeOfCreating: Date.now(),
-      tasks: [],
-    };
-    dispatch(addGroupAction(newGroup));
+    const id = new Date().getTime().toString();
+    const name = groupName;
+    const changedName = false;
+    const timeOfCreating = Date.now();
+    dispatch(addGroupAction(id, name, changedName, timeOfCreating));
     setGroupName('');
     dispatch(closeGroupModal());
   };

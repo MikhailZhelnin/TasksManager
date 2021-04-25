@@ -1,6 +1,9 @@
 // Group
 export const ADD_GROUP = 'ADD_GROUP';
 export const DELETE_GROUP = 'DELETE_GROUP';
+export const OPEN_GROUP_NAME_EDIT = 'OPEN_GROUP_NAME_EDIT';
+export const CLOSE_GROUP_NAME_EDIT = 'CLOSE_GROUP_NAME_EDIT';
+export const EDIT_GROUP_NAME = 'EDIT_GROUP_NAME';
 export const OPEN_GROUP_MODAL = 'OPEN_GROUP_MODAL';
 export const CLOSE_GROUP_MODAL = 'CLOSE_GROUP_MODAL';
 // Tasks

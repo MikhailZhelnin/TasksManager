@@ -1,17 +1,26 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { addTask, deleteGroupAction } from '../../../redux/actionCreators/groupActionCreator';
+import {
+  addTask,
+  deleteGroupAction,
+  openGroupNameEdit,
+  closeGroupNameEdit,
+  editGroupName,
+} from '../../../redux/actionCreators/groupActionCreator';
 
 import { AiOutlineDelete } from 'react-icons/ai';
 import { RiAddLine } from 'react-icons/ri';
+import { VscEdit } from 'react-icons/vsc';
+import { AiOutlineSave } from 'react-icons/ai';
 
 import TasksList from '../../TasksList/TasksList';
 
 import './GroupItem.css';
 
-const GroupItem = ({ id, name, timeOfCreating }) => {
+const GroupItem = ({ id, name, changedName, timeOfCreating }) => {
   const [taskName, setTaskName] = useState('');
+  const [newName, setNewInputName] = useState(name);
   const dispatch = useDispatch();
 
   const addNewTask = (id) => {
@@ -28,10 +37,38 @@ const GroupItem = ({ id, name, timeOfCreating }) => {
     setTaskName('');
   };
 
+  const editNameHandler = (name, id) => {
+    dispatch(editGroupName(name, id));
+    setNewInputName(name);
+    dispatch(closeGroupNameEdit(id));
+  };
+
   return (
     <div key={id} className="groupList__item">
       <header className="groupList__item-header">
-        <h3 className="groupList__item-header__name">{name}</h3>
+        {changedName ? (
+          <div className="groupList__item-header__changed-name">
+            <input
+              type="text"
+              value={newName}
+              onChange={(e) => setNewInputName(e.target.value)}
+              autoFocus
+            />
+          </div>
+        ) : (
+          <h3 className="groupList__item-header__name">{name}</h3>
+        )}
+        {changedName ? (
+          <AiOutlineSave
+            className="groupList__item-header__btn"
+            onClick={() => editNameHandler(newName, id)}
+          />
+        ) : (
+          <VscEdit
+            className="groupList__item-header__btn"
+            onClick={() => dispatch(openGroupNameEdit(id))}
+          />
+        )}
         <AiOutlineDelete
           className="groupList__item-header__btn"
           onClick={() => dispatch(deleteGroupAction(id))}

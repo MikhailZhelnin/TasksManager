@@ -9,9 +9,36 @@ const initialState = {
 const groups = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.ADD_GROUP:
+      const newGroup = {
+        id: action.payload.id,
+        name: action.payload.name,
+        changedName: action.payload.changedName,
+        timeOfCreating: action.payload.timeOfCreating,
+      };
       return {
         ...state,
-        groups: [...state.groups, action.payload],
+        groups: [...state.groups, newGroup],
+      };
+    case actionTypes.OPEN_GROUP_NAME_EDIT:
+      return {
+        ...state,
+        groups: state.groups.map((group) =>
+          group.id === action.payload ? { ...group, changedName: true } : group,
+        ),
+      };
+    case actionTypes.CLOSE_GROUP_NAME_EDIT:
+      return {
+        ...state,
+        groups: state.groups.map((group) =>
+          group.id === action.payload ? { ...group, changedName: false } : group,
+        ),
+      };
+    case actionTypes.EDIT_GROUP_NAME:
+      return {
+        ...state,
+        groups: state.groups.map((group) =>
+          group.id === action.payload.id ? { ...group, name: action.payload.name } : group,
+        ),
       };
     case actionTypes.DELETE_GROUP:
       return {
