@@ -4,10 +4,6 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.header-dark {
-  background-color: rgb(66, 66, 66);
-}
-
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -16,4 +12,11 @@
 
 .header__title {
   color: #fff;
+}
+
+.header__btn-background {
+  padding: 0 5px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
 }

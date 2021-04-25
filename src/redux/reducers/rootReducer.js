@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
 import groups from './groupReducer';
-import theme from './themeReducer';
 import background from './backgroundReducer';
 
-const rootReducer = combineReducers({ groups, theme, background });
+const rootReducer = combineReducers({ groups, background });
 
 export default rootReducer;

@@ -7,7 +7,6 @@ export const CLOSE_GROUP_MODAL = 'CLOSE_GROUP_MODAL';
 export const ADD_TASK = 'ADD_TASK';
 export const CHECK_TASK = 'CHECK_TASK';
 export const DELETE_TASK = 'DELETE_TASK';
-export const CHANGE_THEME = 'CHANGE_THEME';
 // Background
 export const SELECT_BACKGROUND = 'SELECT_BACKGROUND';
 export const OPEN_BACKGROUND_MODAL = 'OPEN_BACKGROUND_MODAL';
