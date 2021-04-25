@@ -19,6 +19,11 @@
   flex-grow: 1;
 }
 
+.tasksList__item-name__completed {
+  color: rgb(153, 153, 153);
+  text-decoration: line-through;
+}
+
 .tasksList__item-btn {
   margin-right: 5px;
   font-size: 17px;
