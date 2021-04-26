@@ -22,8 +22,14 @@ const GroupModal = () => {
     dispatch(closeGroupModal());
   };
 
+  const handleClick = (e) => {
+    if (e.target.classList.contains('groupModal')) {
+      dispatch(closeGroupModal());
+    }
+  };
+
   return (
-    <div className="groupModal">
+    <div className="groupModal" onClick={handleClick}>
       <div className="groupModal__wrapper">
         <input
           type="text"

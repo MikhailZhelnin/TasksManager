@@ -13,13 +13,19 @@ import './BackgroundModal.css';
 const BackgroundModal = () => {
   const dispatch = useDispatch();
 
+  const handleClick = (e) => {
+    if (e.target.classList.contains('backgroundModal')) {
+      dispatch(closeBackModal());
+    }
+  };
+
   const selectImageHandler = (img) => {
     dispatch(selectBackground(img));
     dispatch(closeBackModal());
   };
 
   return (
-    <div className="backgroundModal">
+    <div className="backgroundModal" onClick={handleClick}>
       <div className="backgroundModal__wrapper">
         {dataImages.map((item) => (
           <div key={item.id} className="backgroundModal__item">
