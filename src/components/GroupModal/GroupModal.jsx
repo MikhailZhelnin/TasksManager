@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 
 import { addGroupAction, closeGroupModal } from '../../redux/actionCreators/groupActionCreator';
 
+import { groupBackColors } from '../../utils/groupBackgroundColors';
+
 import './GroupModal.css';
 
 const GroupModal = () => {
@@ -15,9 +17,20 @@ const GroupModal = () => {
     }
     const id = new Date().getTime().toString();
     const name = groupName;
+    const backgroundColor = groupBackColors[0];
     const changedName = false;
+    const changedBackgroundColor = false;
     const timeOfCreating = Date.now();
-    dispatch(addGroupAction(id, name, changedName, timeOfCreating));
+    dispatch(
+      addGroupAction(
+        id,
+        name,
+        backgroundColor,
+        changedName,
+        changedBackgroundColor,
+        timeOfCreating,
+      ),
+    );
     setGroupName('');
     dispatch(closeGroupModal());
   };

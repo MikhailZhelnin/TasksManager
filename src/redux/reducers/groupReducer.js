@@ -12,7 +12,9 @@ const groups = (state = initialState, action) => {
       const newGroup = {
         id: action.payload.id,
         name: action.payload.name,
+        backgroundColor: action.payload.backgroundColor,
         changedName: action.payload.changedName,
+        changedBackgroundColor: action.payload.changedBackgroundColor,
         timeOfCreating: action.payload.timeOfCreating,
       };
       return {
@@ -38,6 +40,31 @@ const groups = (state = initialState, action) => {
         ...state,
         groups: state.groups.map((group) =>
           group.id === action.payload.id ? { ...group, name: action.payload.name } : group,
+        ),
+      };
+    case actionTypes.OPEN_GROUP_COLOR_EDIT:
+      return {
+        ...state,
+        groups: state.groups.map((group) =>
+          group.id === action.payload
+            ? { ...group, changedBackgroundColor: !group.changedBackgroundColor }
+            : group,
+        ),
+      };
+    case actionTypes.CLOSE_GROUP_COLOR_EDIT:
+      return {
+        ...state,
+        groups: state.groups.map((group) =>
+          group.id === action.payload ? { ...group, changedBackgroundColor: false } : group,
+        ),
+      };
+    case actionTypes.EDIT_GROUP_COLOR:
+      return {
+        ...state,
+        groups: state.groups.map((group) =>
+          group.id === action.payload.id
+            ? { ...group, backgroundColor: action.payload.color }
+            : group,
         ),
       };
     case actionTypes.DELETE_GROUP:

@@ -1,12 +1,21 @@
 import * as actionTypes from '../types/types';
 
-export const addGroupAction = (id, name, changedName, timeOfCreating) => {
+export const addGroupAction = (
+  id,
+  name,
+  backgroundColor,
+  changedName,
+  changedBackgroundColor,
+  timeOfCreating,
+) => {
   return {
     type: actionTypes.ADD_GROUP,
     payload: {
       id,
       name,
+      backgroundColor,
       changedName,
+      changedBackgroundColor,
       timeOfCreating,
     },
   };
@@ -38,6 +47,30 @@ export const editGroupName = (name, id) => {
     type: actionTypes.EDIT_GROUP_NAME,
     payload: {
       name,
+      id,
+    },
+  };
+};
+
+export const openGroupColorEdit = (id) => {
+  return {
+    type: actionTypes.OPEN_GROUP_COLOR_EDIT,
+    payload: id,
+  };
+};
+
+export const closeGroupColorEdit = (id) => {
+  return {
+    type: actionTypes.CLOSE_GROUP_COLOR_EDIT,
+    payload: id,
+  };
+};
+
+export const editGroupColor = (color, id) => {
+  return {
+    type: actionTypes.EDIT_GROUP_COLOR,
+    payload: {
+      color,
       id,
     },
   };

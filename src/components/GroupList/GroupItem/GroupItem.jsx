@@ -7,18 +7,28 @@ import {
   openGroupNameEdit,
   closeGroupNameEdit,
   editGroupName,
+  openGroupColorEdit,
 } from '../../../redux/actionCreators/groupActionCreator';
 
 import { AiOutlineDelete } from 'react-icons/ai';
 import { RiAddLine } from 'react-icons/ri';
 import { VscEdit } from 'react-icons/vsc';
 import { AiOutlineSave } from 'react-icons/ai';
+import { IoColorPaletteOutline } from 'react-icons/io5';
 
 import TasksList from '../../TasksList/TasksList';
+import GroupColorModal from '../../GroupColorModal/GroupColorModal';
 
 import './GroupItem.css';
 
-const GroupItem = ({ id, name, changedName, timeOfCreating }) => {
+const GroupItem = ({
+  id,
+  name,
+  backgroundColor,
+  changedName,
+  changedBackgroundColor,
+  timeOfCreating,
+}) => {
   const [taskName, setTaskName] = useState('');
   const [newName, setNewInputName] = useState(name);
   const dispatch = useDispatch();
@@ -44,7 +54,7 @@ const GroupItem = ({ id, name, changedName, timeOfCreating }) => {
   };
 
   return (
-    <div key={id} className="groupList__item">
+    <div key={id} className="groupList__item" style={{ backgroundColor: backgroundColor }}>
       <header className="groupList__item-header">
         {changedName ? (
           <div className="groupList__item-header__changed-name">
@@ -88,6 +98,15 @@ const GroupItem = ({ id, name, changedName, timeOfCreating }) => {
         </div>
       </main>
       <footer className="groupList__item-footer">
+        <div className="groupList__item-footer__color">
+          <IoColorPaletteOutline
+            className="groupList__item-footer__color-icon"
+            onClick={() => dispatch(openGroupColorEdit(id))}
+          />
+          {changedBackgroundColor ? (
+            <GroupColorModal id={id} backgroundColor={backgroundColor} />
+          ) : null}
+        </div>
         <span className="groupList__item-footer__time">
           Added:{' '}
           {new Date(timeOfCreating).toLocaleDateString('en-GB', {
