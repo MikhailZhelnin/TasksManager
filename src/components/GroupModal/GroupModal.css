@@ -43,3 +43,47 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+@media (max-width: 700px) {
+  .groupModal__wrapper {
+    width: 400px;
+    height: 150px;
+  }
+
+  .groupModal__btn {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .groupModal__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+  }
+
+  .groupModal__input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .groupModal__btn-close {
+    display: none;
+  }
+
+  .groupModal__btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .groupModal__wrapper {
+    width: 300px;
+  }
+}
+
+@media (max-width: 310px) {
+  .groupModal__wrapper {
+    width: 270px;
+  }
+}

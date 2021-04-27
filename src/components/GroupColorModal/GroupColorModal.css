@@ -9,8 +9,8 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgb(204, 204, 204);
-  border: 1px solid rgb(184, 184, 184);
+  background-color: #fff;
+  border: 1px solid #111;
   border-radius: 10px;
 }
 
@@ -19,4 +19,8 @@
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.groupColarModal__color:hover {
+  border: 1px solid #111;
 }

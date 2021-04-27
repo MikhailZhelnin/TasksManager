@@ -121,6 +121,13 @@ const groups = (state = initialState, action) => {
           task.id === action.payload.idTask ? { ...task, photo: action.payload.photo } : task,
         ),
       };
+    case actionTypes.DELETE_TASK_PHOTO:
+      return {
+        ...state,
+        tasks: state.tasks.map((task) =>
+          task.id === action.payload.idTask ? { ...task, photo: action.payload.empty } : task,
+        ),
+      };
     default:
       return state;
   }

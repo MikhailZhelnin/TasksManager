@@ -4,8 +4,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import TaskModal from '../TaskModal/TaskModal';
 
 import { BsThreeDotsVertical } from 'react-icons/bs';
+import { IoCloseSharp } from 'react-icons/io5';
 
-import { openTaskModal } from '../../redux/actionCreators/groupActionCreator';
+import { openTaskModal, deleteTaskPhoto } from '../../redux/actionCreators/groupActionCreator';
 
 import './TasksList.css';
 
@@ -21,6 +22,10 @@ const TasksList = (props) => {
             {item.photo ? (
               <div className="tasksList__item-header">
                 <img src={item.photo} alt="task img" />
+                <IoCloseSharp
+                  className="tasksList__item-header__btnDelete"
+                  onClick={() => dispatch(deleteTaskPhoto(item.id, false))}
+                />
               </div>
             ) : null}
 

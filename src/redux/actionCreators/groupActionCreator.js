@@ -132,3 +132,13 @@ export const addTaskPhoto = (idTask, photo) => {
     },
   };
 };
+
+export const deleteTaskPhoto = (idTask, empty) => {
+  return {
+    type: actionTypes.DELETE_TASK_PHOTO,
+    payload: {
+      idTask,
+      empty,
+    },
+  };
+};

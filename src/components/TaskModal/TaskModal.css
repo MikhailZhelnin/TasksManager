@@ -27,3 +27,15 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 1024px) {
+  .taskModal {
+    left: -80px;
+  }
+}
+
+@media (max-width: 700px) {
+  .taskModal {
+    left: -41px;
+  }
+}
