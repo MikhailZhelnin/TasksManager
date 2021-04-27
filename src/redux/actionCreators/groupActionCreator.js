@@ -108,3 +108,27 @@ export const deleteTask = (idTask) => {
     payload: idTask,
   };
 };
+
+export const openTaskModal = (idTask) => {
+  return {
+    type: actionTypes.OPEN_TASK_MODAL,
+    payload: idTask,
+  };
+};
+
+export const closeTaskModal = (idTask) => {
+  return {
+    type: actionTypes.CLOSE_TASK_MODAL,
+    payload: idTask,
+  };
+};
+
+export const addTaskPhoto = (idTask, photo) => {
+  return {
+    type: actionTypes.ADD_TASK_PHOTO,
+    payload: {
+      idTask,
+      photo,
+    },
+  };
+};

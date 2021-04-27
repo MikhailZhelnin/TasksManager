@@ -100,6 +100,27 @@ const groups = (state = initialState, action) => {
         ...state,
         tasks: state.tasks.filter((task) => task.id !== action.payload),
       };
+    case actionTypes.OPEN_TASK_MODAL:
+      return {
+        ...state,
+        tasks: state.tasks.map((task) =>
+          task.id === action.payload ? { ...task, actionsModalOpen: !task.actionsModalOpen } : task,
+        ),
+      };
+    case actionTypes.CLOSE_TASK_MODAL:
+      return {
+        ...state,
+        tasks: state.tasks.map((task) =>
+          task.id === action.payload ? { ...task, actionsModalOpen: false } : task,
+        ),
+      };
+    case actionTypes.ADD_TASK_PHOTO:
+      return {
+        ...state,
+        tasks: state.tasks.map((task) =>
+          task.id === action.payload.idTask ? { ...task, photo: action.payload.photo } : task,
+        ),
+      };
     default:
       return state;
   }

@@ -13,6 +13,9 @@ export const CLOSE_GROUP_MODAL = 'CLOSE_GROUP_MODAL';
 export const ADD_TASK = 'ADD_TASK';
 export const CHECK_TASK = 'CHECK_TASK';
 export const DELETE_TASK = 'DELETE_TASK';
+export const OPEN_TASK_MODAL = 'OPEN_TASK_MODAL';
+export const CLOSE_TASK_MODAL = 'CLOSE_TASK_MODAL';
+export const ADD_TASK_PHOTO = 'ADD_TASK_PHOTO';
 // Background
 export const SELECT_BACKGROUND = 'SELECT_BACKGROUND';
 export const OPEN_BACKGROUND_MODAL = 'OPEN_BACKGROUND_MODAL';

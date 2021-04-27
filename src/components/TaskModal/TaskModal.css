@@ -1,0 +1,29 @@
+.taskModal {
+  position: absolute;
+  top: -60px;
+  left: -41px;
+  width: 100px;
+  height: 50px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+.taskModal-btn {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#input[type='file'] {
+  display: none;
+}
+
+.taskModal-btn__imgUpload-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

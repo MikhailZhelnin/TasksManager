@@ -41,7 +41,9 @@ const GroupItem = ({
       groupId: id,
       id: new Date().getTime().toString(),
       name: taskName,
+      photo: '',
       isCompleted: false,
+      actionsModalOpen: false,
     };
     dispatch(addTask(newTask));
     setTaskName('');
