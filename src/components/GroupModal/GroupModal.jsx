@@ -5,7 +5,7 @@ import { addGroupAction, closeGroupModal } from '../../redux/actionCreators/grou
 
 import { groupBackColors } from '../../utils/groupBackgroundColors';
 
-import './GroupModal.css';
+import './GroupModal.scss';
 
 const GroupModal = () => {
   const dispatch = useDispatch();

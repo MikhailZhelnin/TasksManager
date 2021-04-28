@@ -19,7 +19,7 @@ import { IoColorPaletteOutline } from 'react-icons/io5';
 import TasksList from '../../TasksList/TasksList';
 import GroupColorModal from '../../GroupColorModal/GroupColorModal';
 
-import './GroupItem.css';
+import './GroupItem.scss';
 
 const GroupItem = ({
   id,

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import { openBackModal } from '../../redux/actionCreators/backgroundActionCreator';
 
-import './Header.css';
+import './Header.scss';
 
 const Header = () => {
   const dispatch = useDispatch();

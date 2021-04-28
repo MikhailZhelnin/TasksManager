@@ -15,10 +15,18 @@
 }
 
 .header__btn-background {
-  padding: 0 5px;
+  padding: 2px 7px;
   font-size: 15px;
-  border: none;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  background: #fff;
   cursor: pointer;
+  transition: background-color 0.1s linear;
+}
+
+.header__btn-background:hover {
+  background-color: rgb(218, 218, 218);
 }
 
 @media (max-width: 500px) {

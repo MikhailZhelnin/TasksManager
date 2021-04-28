@@ -5,7 +5,7 @@ import { openGroupModal } from '../../redux/actionCreators/groupActionCreator';
 
 import GroupItem from './GroupItem/GroupItem';
 
-import './GroupList.css';
+import './GroupList.scss';
 
 const GroupList = () => {
   const dispatch = useDispatch();

@@ -8,7 +8,7 @@ import { IoCloseSharp } from 'react-icons/io5';
 
 import { openTaskModal, deleteTaskPhoto } from '../../redux/actionCreators/groupActionCreator';
 
-import './TasksList.css';
+import './TasksList.scss';
 
 const TasksList = (props) => {
   const dispatch = useDispatch();

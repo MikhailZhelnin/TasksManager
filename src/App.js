@@ -6,7 +6,7 @@ import GroupList from './components/GroupList/GroupList';
 import GroupModal from './components/GroupModal/GroupModal';
 import BackgroundModal from './components/BackgroundModal/BackgroundModal';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   const groupsModal = useSelector((state) => state.groups.groupsModalOpen);

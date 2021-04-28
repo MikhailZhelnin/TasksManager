@@ -11,7 +11,7 @@ import {
 import { MdClose, MdCheck } from 'react-icons/md';
 import { HiOutlinePhotograph } from 'react-icons/hi';
 
-import './TaskModal.css';
+import './TaskModal.scss';
 
 const TaskModal = ({ taskId }) => {
   const dispatch = useDispatch();

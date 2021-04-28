@@ -5,7 +5,7 @@ import { editGroupColor, closeGroupColorEdit } from '../../redux/actionCreators/
 
 import { groupBackColors } from '../../utils/groupBackgroundColors';
 
-import './GroupColorModal.css';
+import './GroupColorModal.scss';
 
 const GroupColorModal = ({ id, backgroundColor }) => {
   const dispatch = useDispatch();

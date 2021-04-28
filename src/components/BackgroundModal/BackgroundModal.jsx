@@ -8,7 +8,7 @@ import {
 
 import { dataImages } from '../../utils/background';
 
-import './BackgroundModal.css';
+import './BackgroundModal.scss';
 
 const BackgroundModal = () => {
   const dispatch = useDispatch();
