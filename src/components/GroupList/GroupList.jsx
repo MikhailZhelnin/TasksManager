@@ -16,7 +16,7 @@ const GroupList = () => {
       <div className="container">
         <div className="groupList__wrapper">
           <button className="groupList__btn" onClick={() => dispatch(openGroupModal())}>
-            Add group
+            Create group
           </button>
           <div className="groupList__list">
             {groups.map((group) => (
