@@ -22,12 +22,21 @@
   background-color: rgb(218, 218, 218);
 }
 
-.groupList__list-grid {
+.groupList__list {
   display: flex;
-  margin-left: -30px;
-  width: auto;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100px;
 }
-.groupList__list-grid_column {
-  padding-left: 30px;
-  background-clip: padding-box;
+
+@media (max-width: 1024px) {
+  .groupList__list {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 700px) {
+  .groupList__list {
+    justify-content: center;
+  }
 }
